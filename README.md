@@ -1,3 +1,11 @@
+# Installed Dependencies
+tailwind, daisy ui, framer motion, sass, react-query, react-toastify, react-router-dom, react-icons
+
+# enviromental variables config
+REACT_APP_LOCAL_BASE_URL
+REACT_APP_BASE_URL
+REACT_APP_DEBUG
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
