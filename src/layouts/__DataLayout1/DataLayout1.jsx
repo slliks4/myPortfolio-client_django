@@ -4,27 +4,24 @@ import { baseUrl } from '../../config/env';
 // Components Import
 import LinkBtn from '../../components/LinkBtn';
 
-// Images Import
-import { noImage } from '../../imports/Images';
-
 // Default Function
 export default function DataLayout1({ title, heading, text, image, path, isFetched=false }) {
   return (
     <>
       { isFetched && image ? (
-        <img src={`${baseUrl}${ image }`} alt={title} />
+        <img src={`${baseUrl}${ image }`} alt={title} className='object-cover object-center rounded-md w-full h-[calc(100vh-80vh)]' />
       ):(
         <>
           { !isFetched && image ? (
-            <img src={image} alt="title" />
+            <img src={image} alt="title" className='object-cover object-center rounded-md w-full h-[calc(100vh-80vh)]' />
           ):
             (
-              <img src={noImage} alt="error" className='opacity-70' />
+              null
             )
           }
         </>
       )}
-      <div >
+      <div className='pt-4 w-[calc(100%-10%)]'>
         { title && (
           <small> 
             <p className='text-lg text-primary font-semibold capitalize py-2'>{ title }</p>

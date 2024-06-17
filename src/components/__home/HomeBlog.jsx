@@ -16,7 +16,7 @@ export default function HomeBlog({ limit=null, skip=null, timer=15000 }) {
   const { data:blogs, isLoading, error } = useQueryGet({ query_key:query_key, query_func:getBlogs, params:params });
 
   return (
-    <>
+    <div className='w-full h-fit'>
       { isLoading && <h1>loading ...</h1> }
       { error && <h1>{ error.message }</h1> }
       { blogs?.data.map(blog=>(
@@ -25,6 +25,6 @@ export default function HomeBlog({ limit=null, skip=null, timer=15000 }) {
           <p>{ blog.text }</p>
         </li>
       ))}
-    </>
+    </div>
   )
 }

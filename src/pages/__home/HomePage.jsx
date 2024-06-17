@@ -14,30 +14,35 @@ import DataLayout1 from '../../layouts/__DataLayout1/DataLayout1';
 import Contact from '../../components/Contact';
   
 // Style Import
-import '../../components/__home/scss/HomeProfile.scss';
-import '../../layouts/__DataLayout1/scss/DataLayout1.scss';
+import './scss/HomePage.scss';
 
 // Default Function
 export default function HomePage() {
     return (
-        <div>
-            <BoxThemeProvider children={ <HomeProfile /> } className='home-profile'/>
+        <div className='flex flex-col'>
+            <BoxThemeProvider children={ <HomeProfile /> } className={'mt-4'} />
             <BoxThemeProvider children={
-                <small>
-                    <p className='uppercase text-lg font-bold text-primary'>latest portfolio and lab</p>
-                </small>
-            } className='text-center my-6 w-full'/>
-            <BoxThemeProvider children={ <HomeProjectPortfolio /> } className='w-full'/>
-            <BoxThemeProvider children={ <HomeProjectLab /> } className='w-full mt-6'/>
+                <div>
+                    <small>
+                        <p className='uppercase text-lg font-bold text-primary'>latest portfolio and lab</p>
+                    </small>
+                </div>
+            } className={'my-4 text-center w-full'}/>
+            <BoxThemeProvider children={ <HomeProjectPortfolio /> } />
+            <BoxThemeProvider children={ <HomeProjectLab /> } className={'mt-4'} />
             <BoxThemeProvider children={
                 <>
                     <HomeShowCase number={5} text='years experience' />
                     <HomeShowCase number={11} text='client worldwide' />
                     <HomeShowCase number={14} text='total projects' />
                 </>
-            } className='w-full flex flex-col my-6'/>
-            <BoxThemeProvider children={ <HomeBlog /> } className='w-full'/>
-            <BoxThemeProvider children={ <DataLayout1 title={'credentials'} heading={'more about me'} image={credentialPic} /> } className='w-full h-fit mt-6 data-layout1' />
+            } className='w-full flex flex-col my-4'/>
+            <BoxThemeProvider children={ <HomeBlog /> } />
+            <BoxThemeProvider children={ 
+                <div className='w-full h-fit data-layout1'>
+                    <DataLayout1 title={'credentials'} heading={'more about me'} image={credentialPic} />
+                </div>
+            } className={'mt-4'} />
             <Contact />
         </div>
     )

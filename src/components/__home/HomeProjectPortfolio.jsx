@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function HomeProjectPortfolio() {
   return (
-    <>HomeProjectPortfolio</>
+    <div className='w-full h-72'>HomeProjectPortfolio</div>
   )
 }

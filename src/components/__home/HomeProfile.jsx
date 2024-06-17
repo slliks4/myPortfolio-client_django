@@ -19,7 +19,7 @@ export default function HomeProfile() {
     
     const { data:profile, isLoading, error } = useQueryGet({ query_key:query_key, query_func:getProfile, params:params });
     return (
-        <>
+        <div className='home-profile h-fit w-full'>
             { isLoading && (
                 <DataLayout1Loading />
             )}
@@ -36,6 +36,6 @@ export default function HomeProfile() {
                     path="/about"
                 />
             )} 
-        </>
+        </div>
     );
 }

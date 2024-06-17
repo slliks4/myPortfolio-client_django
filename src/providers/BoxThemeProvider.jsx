@@ -5,7 +5,7 @@ import { useEffect, useRef } from 'react';
 import { motion, useAnimation, useInView } from '../imports/Library';
 
 // Default Funtion
-export default function BoxThemeProvider({ children, className="" }) {
+export default function BoxThemeProvider({ children, className }) {
     // Check if element is in view
     const boxThemeRef = useRef(null);
     const isBoxThemeInView = useInView(boxThemeRef, {once:true}); // Runs just once on mount
@@ -19,7 +19,7 @@ export default function BoxThemeProvider({ children, className="" }) {
 
     return (
         <motion.div 
-            className={'p-4 rounded-2xl shadow relative bg-gradient-dark bg-fixed bg-cover bg-center '+ className}
+            className={'p-4 rounded-2xl shadow relative bg-gradient-dark bg-fixed bg-cover bg-center w-full h-fit '+className}
             ref={boxThemeRef}
             variants={
                 {
