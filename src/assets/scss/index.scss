@@ -12,16 +12,16 @@
 }::-webkit-scrollbar {
     display: none;
 }
-.home-profile {
+.home-profile{
     @apply w-full h-fit overflow-hidden flex flex-col mt-4;
 }
-.home-profile img {
+.home-profile img{
     @apply object-cover object-center rounded-tr-3xl rounded-tl-md rounded-bl-3xl rounded-br-md;
 }
-.home-profile > :nth-child(1) {
+.home-profile>:nth-child(1){
     @apply w-full h-[calc(100vh-60vh)];
 }
-.home-profile > :nth-child(2) {
+.home-profile>:nth-child(2){
     @apply pt-4 w-[calc(100%-10%)];
 }
 
