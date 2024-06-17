@@ -1,5 +1,5 @@
 // React Imports
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 // React router dom imports
 import { Outlet } from "react-router-dom";
@@ -10,10 +10,11 @@ import AppFooter from '../../components/app/__footer/AppFooter';
 import AppSideHeader from "../../components/app/__header/AppSideHeader";
 import ScrollTopBtn from "../../components/ScrollTopBtn";
 import SideMenu from '../../components/app/__menu/SideMenu';
+import useAppContext from '../../hooks/useAppContext';
 
 // Default function
 export default function AppLayout() {
-  const [ showSideMenu, setShowSideMenu ] = useState(false);
+  const { showSideMenu } = useAppContext();
   
   useEffect(() => {
     if (showSideMenu) {
@@ -29,8 +30,8 @@ export default function AppLayout() {
 
   return (
     <div className="relative w-screen overflow-y-scroll no-scrollbar overflow-x-hidden">
-      { showSideMenu && <SideMenu setShowSideMenu={setShowSideMenu} /> }
-      { !showSideMenu && <AppTopHeader showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} /> }
+      { showSideMenu && <SideMenu /> }
+      { !showSideMenu && <AppTopHeader /> }
       <AppSideHeader />
       <section className="w-screen min-h-svh max-h-fit pt-20 pb-6 px-3 flex flex-col lg:w-[calc(100vw-20vw)] lg:ml-[calc(100vw-80vw)]">
         <Outlet />

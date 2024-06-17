@@ -1,22 +1,25 @@
 // Icon Imports
 import { MenuIcon } from '../imports/Icons';
 
+// Context Import
+import useAppContext from '../hooks/useAppContext';
+
 // Default Funtion
-export default function MenuBtn({ setShowSideMenu, showSideMenu }) {
+export default function MenuBtn() {
+    const { dispatch } = useAppContext();
+    
     const handleClick = () => {
-        setShowSideMenu(true)
+        dispatch({ type: 'SET_SHOW_SIDE_MENU', payload: true });
     }
 
     return (
         <>
-            { !showSideMenu && (
-                <button
-                    className='text-primary font-extrabold'
-                    onClick={()=>handleClick()}
-                >
-                    <MenuIcon />
-                </button>
-            )}        
+            <button
+                className='text-primary font-extrabold'
+                onClick={()=>handleClick()}
+            >
+                <MenuIcon />
+            </button> 
         </>
     )
 }

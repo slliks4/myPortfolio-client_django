@@ -1,9 +1,6 @@
 // Library Imports
 import { ToastContainer } from "./imports/Library";
 
-// React Imports
-import { lazy } from "react";
-
 // React router dom imports
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -13,14 +10,17 @@ import AppLayout from "./layouts/app/AppLayout";
 // Hook Imports
 import useValidateServer from "./hooks/useValidateServer";
 
+// Context Import
+import { AppContextProvider } from "./context/AppContext";
+
 // Component Imports
-const AppLoading = lazy(()=>import("./components/update/AppLoading"));
+import AppLoading from './components/update/AppLoading';
 
 // Page Imports
-const ServerErrorPage = lazy(()=>import("./pages/error/ServerErrorPage"));
-const NotFoundPage = lazy(()=>import("./pages/error/NotFoundPage"));
-const ErrorPage = lazy(()=>import("./pages/error/ErrorPage"));
-const HomePage = lazy(()=>import("./pages/__home/HomePage"));
+import ErrorPage from './pages/error/ErrorPage';
+import HomePage from './pages/__home/HomePage';
+import NotFoundPage from './pages/error/NotFoundPage';
+import ServerErrorPage from './pages/error/ServerErrorPage';
 
 
 // Default Function
@@ -46,10 +46,10 @@ function App() {
   if (error){ return <ServerErrorPage error={"Could not establish connection with server"} /> }
   
   return (
-    <>    
+    <AppContextProvider>    
       <RouterProvider router={routes} />
       <ToastContainer />
-    </>
+    </AppContextProvider>
   );
 }
 

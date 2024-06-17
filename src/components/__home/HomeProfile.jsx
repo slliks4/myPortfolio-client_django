@@ -26,7 +26,7 @@ export default function HomeProfile() {
             { error && (
                 <DataLayout1Error message={"Failed to resolve"} />
             )}
-            { profile && (
+            { profile ? (
                 <DataLayout1
                     image={profile.data.pic}
                     isFetched={true}
@@ -35,7 +35,7 @@ export default function HomeProfile() {
                     text={profile.data.home_text}
                     path="/about"
                 />
-            )} 
+            ):null} 
         </div>
     );
 }
