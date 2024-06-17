@@ -8,7 +8,7 @@ import getProfile from '../../api/GET/getProfile';
 import useQueryGet from '../../hooks/useQueryGet';
 
 // Style Import
-import './scss/HomeProfile.scss';
+// import './scss/HomeProfile.scss';
 
 // Layout Import
 import DataLayout1 from '../../layouts/__DataLayout1/DataLayout1';

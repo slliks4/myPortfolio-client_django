@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 
 // Style
 import './assets/scss/index.scss';
-import './layouts/__DataLayout1/scss/DataLayout1.scss';
+// import './layouts/__DataLayout1/scss/DataLayout1.scss';
 
 // Component Import
 import App from './App';
