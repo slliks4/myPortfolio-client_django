@@ -1,0 +1,12 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.home-profile {
+    @apply flex justify-center p-40;
+    
+    h1{
+        @apply border p-4 bg-green-900 text-white;
+    }
+}

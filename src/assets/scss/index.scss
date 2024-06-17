@@ -16,11 +16,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-.App{
-  @apply flex justify-center p-40;
-
-  h1{
-    @apply border p-4 bg-green-900 text-white;
-  }
-}
