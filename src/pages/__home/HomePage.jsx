@@ -14,7 +14,7 @@ import DataLayout1 from '../../layouts/__DataLayout1/DataLayout1';
 import Contact from '../../components/Contact';
   
 // Style Import
-// import './scss/HomePage.scss';
+import './scss/HomePage.scss';
 
 // Default Function
 export default function HomePage() {
