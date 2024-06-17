@@ -1,13 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
+// Style
 import './assets/scss/index.scss';
+import './layouts/__DataLayout1/scss/DataLayout1.scss';
+
+// Component Import
 import App from './App';
+
+// Services import
 import reportWebVitals from './services/reportWebVitals';
+
+// Library Import
+import { QueryClient, QueryClientProvider } from "./imports/Library";
+
+// Creating query client
+const queryClient = new QueryClient();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <QueryClientProvider client={queryClient}>
+      <App />
+    </QueryClientProvider>
   </React.StrictMode>
 );
 

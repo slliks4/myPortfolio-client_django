@@ -1,0 +1,18 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.data-layout1{
+    @apply overflow-hidden flex flex-col;
+}
+
+.data-layout1 img{
+    @apply object-cover object-center rounded-md;
+}
+.data-layout1 > :nth-child(1){
+    @apply w-full h-[calc(100vh-80vh)];
+}
+.data-layout1 > :nth-child(2){
+    @apply pt-4 w-[calc(100%-10%)];
+}

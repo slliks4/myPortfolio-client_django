@@ -2,7 +2,23 @@
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   theme: {
-    extend: {},
+    darkMode: ['media', 'class'],
+    extend: {
+      colors:{
+        primary: '#10B981',
+        secondary: '#064E3B',
+        error: '#DC2626'
+      },
+      fontFamily:{
+        body: ["Quicksand"]
+      },
+      backgroundImage: theme => ({
+        'gradient-dark': 'var(--gradient-dark)',
+      }),
+    },
+  },
+  variants: {
+    backgroundImage: ['dark'],
   },
   plugins: [
     require('daisyui'),
