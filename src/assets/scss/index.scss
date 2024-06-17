@@ -25,5 +25,5 @@ body.side-menu{
 }
 
 .home-profile{
-    display: none;
+    @apply hidden;
 }
