@@ -4,10 +4,7 @@
 @tailwind utilities;
 
 .home-profile{
-    // img {
-    //     @apply rounded-tr-3xl rounded-tl-md rounded-bl-3xl rounded-br-md;
-    // }
-    // >:nth-child(1) {
-    //     @apply w-full h-[calc(100vh-60vh)];
-    // }
+    >:nth-child(1) {
+        @apply w-full h-[calc(100vh-60vh)] rounded-tr-3xl rounded-tl-md rounded-bl-3xl rounded-br-md;
+    }
 }
