@@ -12,7 +12,11 @@ import HomeProjectPortfolio from '../../components/__home/HomeProjectPortfolio';
 import HomeShowCase from '../../components/__home/HomeShowCase';
 import DataLayout1 from '../../layouts/__DataLayout1/DataLayout1';
 import Contact from '../../components/Contact';
-                                                                                                                                        
+  
+// Style Import
+import '../../components/__home/scss/HomeProfile.scss';
+import '../../layouts/__DataLayout1/scss/DataLayout1.scss';
+
 // Default Function
 export default function HomePage() {
     return (

@@ -7,9 +7,6 @@ import getProfile from '../../api/GET/getProfile';
 // Hooks Import
 import useQueryGet from '../../hooks/useQueryGet';
 
-// Style Import
-// import './scss/HomeProfile.scss';
-
 // Layout Import
 import DataLayout1 from '../../layouts/__DataLayout1/DataLayout1';
 const DataLayout1Error = lazy(()=> import('../../layouts/__DataLayout1/DataLayout1Error'));

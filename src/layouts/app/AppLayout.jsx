@@ -28,7 +28,7 @@ export default function AppLayout() {
   }, [showSideMenu]);
 
   return (
-    <div className="relative w-screen overflow-y-scroll no-scrollbar overflow-x-hidden App">
+    <div className="relative w-screen overflow-y-scroll no-scrollbar overflow-x-hidden">
       { showSideMenu && <SideMenu setShowSideMenu={setShowSideMenu} /> }
       { !showSideMenu && <AppTopHeader showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} /> }
       <AppSideHeader />
