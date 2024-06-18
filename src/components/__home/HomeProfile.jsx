@@ -1,6 +1,3 @@
-// React Import
-import { lazy } from 'react';
-
 // Api Import
 import getProfile from '../../api/GET/getProfile';
 
@@ -9,8 +6,8 @@ import useQueryGet from '../../hooks/useQueryGet';
 
 // Layout Import
 import DataLayout1 from '../../layouts/__DataLayout1/DataLayout1';
-const DataLayout1Error = lazy(()=> import('../../layouts/__DataLayout1/DataLayout1Error'));
-const DataLayout1Loading = lazy(()=> import('../../layouts/__DataLayout1/DataLayout1Loading'));
+import DataLayout1Error from '../../layouts/__DataLayout1/DataLayout1Error';
+import DataLayout1Loading from '../../layouts/__DataLayout1/DataLayout1Loading';
 
 // Default Function
 export default function HomeProfile() {

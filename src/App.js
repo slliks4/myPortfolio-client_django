@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 // Layout Imports
 import AppLayout from "./layouts/app/AppLayout";
+import ProjectLayout from "./layouts/__project/ProjectLayout";
 
 // Hook Imports
 import useValidateServer from "./hooks/useValidateServer";
@@ -21,6 +22,8 @@ import ErrorPage from './pages/error/ErrorPage';
 import HomePage from './pages/__home/HomePage';
 import NotFoundPage from './pages/error/NotFoundPage';
 import ServerErrorPage from './pages/error/ServerErrorPage';
+import ProjectPortfolioPage from './pages/__project/ProjectPortfolioPage';
+import ProjectLabPage from './pages/__project/ProjectLabPage';
 
 
 // Default Function
@@ -36,7 +39,15 @@ function App() {
       element: <AppLayout />,
       children:[
         { index:true, element: <HomePage /> },
-        { path:'about', element:<h1>about page</h1> }
+        { path:'about', element:<h1>about page</h1> },
+        {
+          path: 'project',
+          element: <ProjectLayout />,
+          children:[
+            { index:true, element: <ProjectPortfolioPage /> },
+            { path:'lab', element: <ProjectLabPage /> }
+          ]
+        }
       ]
     },
     { path:"*", element: <NotFoundPage /> }

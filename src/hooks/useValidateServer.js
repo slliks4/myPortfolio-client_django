@@ -1,5 +1,5 @@
 // Library Imports
-import { useQuery } from "react-query";
+import { useQuery } from "../imports/Library";
 
 // Services Imports
 import apiGet from "../services/apiGet";
