@@ -1,20 +1,22 @@
+// Style Import
+import './scss/HomePage.scss';
+
 // Images Import
 import { credentialPic } from '../../imports/Images';
 
-// Providers Imports
+// Providers Import
 import BoxThemeProvider from '../../providers/BoxThemeProvider';
 
-// Component Imports
-import HomeBlog from '../../components/__home/HomeBlog';
+// Components Import
 import HomeProfile from '../../components/__home/HomeProfile';
-import HomeProjectLab from '../../components/__home/HomeProjectLab';
-import HomeProjectPortfolio from '../../components/__home/HomeProjectPortfolio';
 import HomeShowCase from '../../components/__home/HomeShowCase';
 import DataLayout1 from '../../layouts/__DataLayout1/DataLayout1';
 import Contact from '../../components/Contact';
-  
-// Style Import
-import './scss/HomePage.scss';
+import HomeSlideShow from '../../components/__home/HomeSlideShow';
+
+// Api Import
+import getProjects from '../../api/GET/getProjects';
+import getBlogs from '../../api/GET/getBlogs';
 
 // Default Function
 export default function HomePage() {
@@ -28,8 +30,34 @@ export default function HomePage() {
                     </small>
                 </div>
             } className={'my-4 text-center w-full'}/>
-            <BoxThemeProvider children={ <HomeProjectPortfolio /> } />
-            <BoxThemeProvider children={ <HomeProjectLab /> } className={'mt-4'} />
+            <BoxThemeProvider children={ 
+                <HomeSlideShow 
+                    title={'project portfolio'}
+                    heading={'explore more'}
+                    path={'/project'}
+                    imgPath={'/project/portfolio'}
+                    query_key={'projectPortfolio'}
+                    query_func={getProjects}
+                    params={{
+                        limit: 1,
+                        isLab: 'false'
+                    }}
+                /> 
+            }/>
+            <BoxThemeProvider children={ 
+                <HomeSlideShow 
+                    title={'project lab'}
+                    heading={'explore more'}
+                    path={'/project'}
+                    imgPath={'/project/lab'}
+                    query_key={'projectLab'}
+                    query_func={getProjects}
+                    params={{
+                        limit: 1,
+                        isLab: 'true'
+                    }}
+                /> 
+            } className={'mt-4'}/>
             <BoxThemeProvider children={
                 <>
                     <HomeShowCase number={5} text='years experience' />
@@ -37,7 +65,19 @@ export default function HomePage() {
                     <HomeShowCase number={14} text='total projects' />
                 </>
             } className='w-full flex flex-col my-4'/>
-            <BoxThemeProvider children={ <HomeBlog /> } />
+            <BoxThemeProvider children={ 
+                <HomeSlideShow 
+                    title={'blogs'}
+                    heading={'explore more'}
+                    path={'/blogs'}
+                    imgPath={'/blogs'}
+                    query_key={'blogs'}
+                    query_func={getBlogs}
+                    params={{
+                        limit: 1,
+                    }}
+                /> 
+            } />
             <BoxThemeProvider children={ 
                 <div className='w-full h-fit data-layout1'>
                     <DataLayout1 title={'credentials'} heading={'more about me'} image={credentialPic} />

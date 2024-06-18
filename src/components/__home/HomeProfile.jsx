@@ -12,9 +12,13 @@ import DataLayout1Loading from '../../layouts/__DataLayout1/DataLayout1Loading';
 // Default Function
 export default function HomeProfile() {
     const query_key = "profile";
-    const params = "/slliks4";
-    
+    const params = {
+        username: 'slliks4'
+    }
+
+    // Fetch Profile by username
     const { data:profile, isLoading, error } = useQueryGet({ query_key:query_key, query_func:getProfile, params:params });
+
     return (
         <div className='home-profile h-fit w-full'>
             { isLoading && (

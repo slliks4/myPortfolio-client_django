@@ -23,7 +23,7 @@ export default function BoxThemeProvider({ children, className }) {
             ref={boxThemeRef}
             variants={
                 {
-                    hidden: { opacity:0, y:100 },
+                    hidden: { opacity:0, y:150 },
                     visible: { opacity:1, y:0 }
                 }
             }

@@ -3,13 +3,16 @@ import { baseUrl } from '../../config/env';
 
 // Components Import
 import LinkBtn from '../../components/LinkBtn';
+import { Link } from 'react-router-dom';
 
 // Default Function
-export default function DataLayout1({ title, heading, text, image, path, isFetched=false }) {
+export default function DataLayout1({ title, heading, text, image, path, isFetched=false, imgPath="" }) {
   return (
     <>
       { isFetched && image ? (
-        <img src={`${baseUrl}${ image }`} alt={title} className='object-cover object-center rounded-md w-full h-[calc(100vh-80vh)]' />
+        <Link to={imgPath} className='w-full h-[calc(100vh-80vh)] overflow-hidden block rounded-md '>
+          <img src={`${baseUrl}${ image }`} alt={title} className='object-cover object-top w-full h-full' />
+        </Link>
       ):(
         <>
           { !isFetched && image ? (
