@@ -29,7 +29,7 @@ export default function HomeSlideShow({ query_func, query_key, params, title, he
   useEffect(() => {
     if(!data){ return }
     // Checks if the legnth of the data === 1
-    if( data && !hasNextPage && data.pages[currentIndex].totalData === 1 ){
+    if( !hasNextPage && data.pages[currentIndex].totalData === 1 ){
       // console.log('abort slideshow');
       return;
     }

@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // Layout Imports
 import AppLayout from "./layouts/app/AppLayout";
 import ProjectLayout from "./layouts/__project/ProjectLayout";
+import AboutLayout from './layouts/__about/AboutLayout';
 
 // Hook Imports
 import useValidateServer from "./hooks/useValidateServer";
@@ -16,14 +17,16 @@ import { AppContextProvider } from "./context/AppContext";
 
 // Component Imports
 import AppLoading from './components/update/AppLoading';
+import AppError from "./components/error/AppError";
+import ServerError from "./components/error/ServerError";
 
 // Page Imports
-import ErrorPage from './pages/error/ErrorPage';
 import HomePage from './pages/__home/HomePage';
 import NotFoundPage from './pages/error/NotFoundPage';
-import ServerErrorPage from './pages/error/ServerErrorPage';
 import ProjectPortfolioPage from './pages/__project/ProjectPortfolioPage';
 import ProjectLabPage from './pages/__project/ProjectLabPage';
+import AboutDefaultPage from './pages/__about/AboutDefaultPage';
+import CredentialPage from './pages/__about/CredentialPage';
 
 
 // Default Function
@@ -35,11 +38,19 @@ function App() {
   const routes = createBrowserRouter([
     {
       path:"/",
-      errorElement: <ErrorPage />,
+      errorElement: <AppError />,
       element: <AppLayout />,
       children:[
         { index:true, element: <HomePage /> },
-        { path:'about', element:<h1>about page</h1> },
+        {
+          path:'about',
+          element: <AboutLayout />,
+          children:[
+            { index:true, element: <AboutDefaultPage /> },
+            { path:'profile', element: <AboutDefaultPage /> },
+            { path:'credentials', element: <CredentialPage /> }
+          ]
+        },
         {
           path: 'project',
           element: <ProjectLayout />,
@@ -54,7 +65,7 @@ function App() {
   ]);
 
   if (isLoading){ return <AppLoading /> }
-  if (error){ return <ServerErrorPage error={"Could not establish connection with server"} /> }
+  if (error){ return <ServerError /> }
   
   return (
     <AppContextProvider>    

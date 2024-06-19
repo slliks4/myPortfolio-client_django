@@ -34,7 +34,7 @@ export default function HomeProfile() {
                     title="fullstack developer"
                     heading={`${profile.data.first_name} ${profile.data.last_name}`}
                     text={profile.data.home_text}
-                    path="/about"
+                    path="/about/profile"
                 />
             ):null} 
         </div>

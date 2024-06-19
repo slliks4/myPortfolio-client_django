@@ -33,7 +33,7 @@ export default function DataLayout1({ title, heading, text, image, path, isFetch
         { heading && <h3 className='text-md capitalize'>{ heading }</h3> }
         { text && <p className='text-md'>{ text }</p> } 
       </div>
-      <LinkBtn path={path} />
+      { path && <LinkBtn path={path} /> }
     </>
   )
 }

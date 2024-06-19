@@ -9,7 +9,7 @@ import BoxThemeProvider from '../../providers/BoxThemeProvider';
 
 export default function ProjectLayout() {
   return (
-    <div>
+    <>
         <BoxThemeProvider children={
             <div className=''>
                 <NavLink to={''}>Portfolio</NavLink> ||
@@ -17,6 +17,6 @@ export default function ProjectLayout() {
             </div>
         } className={'w-full my-4'}/>
         <Outlet />
-    </div>
+    </>
   )
 }
