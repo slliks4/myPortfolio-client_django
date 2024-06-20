@@ -19,7 +19,7 @@ export default function BoxThemeProvider({ children, className }) {
 
     return (
         <motion.div 
-            className={'p-4 rounded-2xl shadow relative bg-gradient-dark bg-fixed bg-cover bg-center w-full h-fit '+className}
+            className={'p-4 rounded-2xl shadow relative bg-gradient-dark w-full h-fit '+className}
             ref={boxThemeRef}
             variants={
                 {

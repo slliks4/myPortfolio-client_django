@@ -14,7 +14,7 @@ export default function SlideAnimationProvider({ children }) {
         if(isShowCaseInView){
             mainControl.start("visible");
         }
-    },[isShowCaseInView, mainControl])
+    },[isShowCaseInView, mainControl]);
 
     return (
         <motion.div
