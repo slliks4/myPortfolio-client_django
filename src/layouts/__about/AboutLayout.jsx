@@ -8,10 +8,11 @@ import getProfile from '../../api/GET/getProfile';
 import useQueryGet from '../../hooks/useQueryGet';
 
 // Components Import
-import BreadCrumps from '../../components/BreadCrumps';
-import AppLoading from '../../components/update/AppLoading';
-import AppError from '../../components/error/AppError';
+import AppLoading from '../../components/app/update/AppLoading';
+import AppError from '../../components/app/error/AppError';
+import NavHeader from '../../components/NavHeader';
 
+// Default Function
 export default function AboutLayout() {
     const query_key = "profile";
     const params = {
@@ -27,7 +28,10 @@ export default function AboutLayout() {
             { error && <AppError errMessage={error.message} /> }
             { profile && (
                 <>
-                    <BreadCrumps />
+                    <NavHeader params={[
+                        { path:'/about/profile', name:'profile' },
+                        { path:'/about/credentials', name:'credentials' }
+                    ]} />
                     <Outlet context={{profile}} />
                 </>
             )}

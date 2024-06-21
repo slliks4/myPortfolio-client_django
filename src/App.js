@@ -16,8 +16,8 @@ import useValidateServer from "./hooks/useValidateServer";
 import { AppContextProvider } from "./context/AppContext";
 
 // Component Imports
-import AppLoading from './components/update/AppLoading';
-import AppError from "./components/error/AppError";
+import AppLoading from './components/app/update/AppLoading';
+import AppError from "./components/app/error/AppError";
 import ServerError from "./components/error/ServerError";
 
 // Page Imports
@@ -56,6 +56,7 @@ function App() {
           element: <ProjectLayout />,
           children:[
             { index:true, element: <ProjectPortfolioPage /> },
+            { path:'portfolio', element: <ProjectPortfolioPage /> },
             { path:'lab', element: <ProjectLabPage /> }
           ]
         }

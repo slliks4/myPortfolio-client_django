@@ -21,7 +21,7 @@ export default function SideMenu() {
     <div className="fixed overflow-hidden w-screen h-screen z-30  flex">
       <div 
         className="w-[calc(100%-90%)] bg-gray-950 opacity-75" 
-        onClick={()=> ()=> handleClick()}
+        onClick={()=> handleClick()}
       />
       <div className="bg-gray-900 p-4 relative w-[calc(100%-10%)] shadow-2xl h-screen overflow-y-scroll no-scrollbar">
         <button 
@@ -34,7 +34,7 @@ export default function SideMenu() {
         <br /><br />
         <NavLink to={'/about/profile'} onClick={()=> handleClick()}>about</NavLink>
         <br /><br />
-        <NavLink to={'/project'} onClick={()=> handleClick()}>project</NavLink>
+        <NavLink to={'/project/portfolio'} onClick={()=> handleClick()}>project</NavLink>
       </div>
     </div>
   )

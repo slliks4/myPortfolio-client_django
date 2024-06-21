@@ -2,21 +2,37 @@
 import React from 'react';
 
 // React Router Dom import
-import { NavLink, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
+
+// Hooks Import
+import useQueryGet from '../../hooks/useQueryGet';
+
+// Api Import
+import getCategories from '../../api/GET/getCategories';
 
 // Components Import
-import BoxThemeProvider from '../../providers/BoxThemeProvider';
+import AppLoading from '../../components/app/update/AppLoading';
+import AppError from '../../components/app/error/AppError';
+import NavHeader from '../../components/NavHeader';
 
+// Default Function
 export default function ProjectLayout() {
+  const query_key = 'categories';
+  const { data:categories, isLoading, error } = useQueryGet({ query_func:getCategories, query_key:query_key });
+  
   return (
     <>
-        <BoxThemeProvider children={
-            <div className=''>
-                <NavLink to={''}>Portfolio</NavLink> ||
-                <NavLink to={'lab'}> Lab </NavLink>
-            </div>
-        } className={'w-full my-4'}/>
-        <Outlet />
+      { isLoading && <AppLoading /> }
+      { error && <AppError errMessage={ error.message } /> }
+      { categories && (
+        <>
+          <NavHeader params={[
+            { path:'/project/portfolio', name:'portfolio' },
+            { path:'/project/lab', name:'lab' }
+          ]} />
+          <Outlet context={{ categories }} />
+        </>
+      )}
     </>
   )
 }
