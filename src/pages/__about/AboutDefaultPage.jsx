@@ -1,5 +1,5 @@
 import { useOutletContext } from "react-router-dom"
-import { ambitionPic, noImage, purposePic } from "../../imports/Images";
+import { noImage } from "../../imports/Images";
 import { baseUrl } from "../../config/env";
 
 // Providers Import
@@ -10,6 +10,8 @@ import SlideAnimationProvider from "../../providers/SlideAnimationProvider";
 import Contact from "../../components/Contact";
 import BuildSkills from "../../components/__about/BuildSkills";
 import BuildServices from '../../components/__about/BuildServices';
+import Vision from "../../components/__about/Vision";
+import Mission from '../../components/__about/Mission';
 
 // Default Function
 export default function AboutDefaultPage() {
@@ -19,8 +21,8 @@ export default function AboutDefaultPage() {
     <div className='flex flex-col'>
       <BoxThemeProvider children={
         <div className="w-full h-fit">
-          <div>
-            <h3>running with the vision</h3>
+          <div className="flex flex-col">
+            <h3 className="mb-6 text-white text-xl capitalize">running with the vision</h3>
             <div>
               <SlideAnimationProvider>
                 <div className="rounded-md overflow-hidden w-full h-[calc(100vh-50vh)]">
@@ -31,30 +33,14 @@ export default function AboutDefaultPage() {
                   )}
                 </div>
               </SlideAnimationProvider>
-              <div>
-                <SlideAnimationProvider>
-                  <div>
-                      <img src={purposePic} alt="" />
-                      <div className="text">
-                          <h2>{ profile.data.vision.title }</h2>
-                          <p> { profile.data.vision.statement } </p>
-                      </div>
-                  </div>
-                </SlideAnimationProvider>
-                <SlideAnimationProvider>            
-                  <div>
-                      <img src={ambitionPic} alt="" />
-                      <div className="text">
-                          <h2>{ profile.data.mission.title }</h2>
-                          <p> { profile.data.mission.statement } </p>
-                      </div>
-                  </div>
-                </SlideAnimationProvider>
+              <div className="flex flex-col">
+                <Vision vision={profile.data.vision} />
+                <Mission mission={profile.data.mission} />
               </div>
             </div>
           </div>
           {/* Skills */}
-          <SlideAnimationProvider>
+          <SlideAnimationProvider className="mt-6">
             <BuildSkills skills={profile.data.skills} />
           </SlideAnimationProvider>
         </div>

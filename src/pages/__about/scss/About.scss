@@ -1,26 +1,23 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 div.terminal{
-    width: auto;
-    font-size: 15px;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: rgba(255, 255, 255, 0.106);
-    word-wrap: break-word;
-    @include respond-to-lg{
-        width:100%;
-        font-size: 20px;
-    }
-  }
-  
   div.command{
-    color: #569cd6;
-  }
-  
-  div.output{
-    color: #00ff00;
+    @apply text-primary;
   }
   
   div.comment{
     color: #808080;
   }
+}
+
+.credentials{
+  >h1{
+    @apply text-xl text-white capitalize;
+  }
+  >p{
+    @apply pb-6 pt-3;
+  }
+}

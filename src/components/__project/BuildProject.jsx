@@ -14,7 +14,7 @@ export default function BuildProject({ data }) {
           <div key={index} className='w-full h-full flex flex-col'>
           { page.data.map(project=>(          
               <SlideAnimationProvider key={project.id}>
-                <Link  to={`/project/${project.id}`} className='block w-full rounded-md h-fit my-2 glass shadow-md'>
+                <Link  to={`/project/${project.id}`} className='block w-full h-fit my-2'>
                   <DataLayout2 title={project.title} image={project.image} />
                 </Link>
               </SlideAnimationProvider>

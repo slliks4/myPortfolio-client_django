@@ -10,7 +10,7 @@ import { noImage } from '../../imports/Images';
 // Default Function
 export default function DataLayout2({ title, heading, date, text, path ,image, showImage }) {
   return (
-    <>
+    <div className='w-full rounded-md h-fit glass'>
         { ((showImage && image) || (image)) ? (
             <img src={`${baseUrl}${ image }`} alt={title} className='w-full h-[calc(100vh-80vh)] rounded-tl-md rounded-tr-md object-cover object-top' />
         ):(
@@ -28,6 +28,6 @@ export default function DataLayout2({ title, heading, date, text, path ,image, s
             { date && <h4 className='text-primary text-sm uppercase py-2'>{ date }</h4> }
             { text && <p className='leading-6'>{ text }</p> }
         </div>
-    </>
+    </div>
   )
 }

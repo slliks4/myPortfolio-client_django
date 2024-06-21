@@ -12,6 +12,9 @@ import AppLoading from '../../components/app/update/AppLoading';
 import AppError from '../../components/app/error/AppError';
 import NavHeader from '../../components/NavHeader';
 
+// Style Import
+import '../../pages/__about/scss/About.scss';
+
 // Default Function
 export default function AboutLayout() {
     const query_key = "profile";

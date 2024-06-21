@@ -6,7 +6,7 @@ export default function AppError({ errMessage="" }) {
   const navigate = useNavigate();
 
   return (
-    <main className="h-svh w-screen fixed top-0 left-0 z-50 bg-gray-950 grid place-items-center px-6 py-24 sm:py-32 lg:px-8">
+    <main className="h-lvh w-screen fixed top-0 left-0 z-50 bg-gray-950 grid place-items-center px-6 py-24 sm:py-32 lg:px-8">
       <div className="text-center">
         <p className="text-base font-semibold text-red-600">OOPS ! ! !</p>
         <h1 className="mt-4 text-3xl font-bold tracking-tight sm:text-5xl">Broken Pipes</h1>

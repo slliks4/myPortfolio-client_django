@@ -1,8 +1,7 @@
-import React from 'react'
-
+// Default Function
 export default function BuildSkills({ skills }) {
   return (
-    <div className="terminal">
+    <div className="terminal rounded-md glass w-full h-fit p-4 break-words">
       <div className="command">&gt; class Myskills():</div>
       <div className="output">&nbsp;&nbsp;&nbsp;&nbsp;Instances:</div>
       <div className="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Initializing skills</div>

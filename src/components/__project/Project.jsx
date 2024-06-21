@@ -29,13 +29,13 @@ export default function Project({ params, query_key }) {
 
     return (
         <div className='mt-2 w-full'>
-            { ( status === 'pending' || isFetchingNextPage ) && <ul className='w-full h-fit flex flex-col'><DataLayout2Loading image={true} title={true} /></ul> }
+            { ( status === 'pending' || isFetchingNextPage ) && <div className='w-full h-fit flex flex-col'><DataLayout2Loading image={true} title={true} /></div> }
             { ( status === 'error' || error || isFetchNextPageError ) && <DataLayout2Error errMessage={"Could not fetch " + query_key} /> }
             { data && <BuildProject data={data}/>}
 
             {/* Fetch next page inview */}
             { (!isFetchingNextPage && status !== 'pending' && hasNextPage) && (
-              <div ref={ref}>{ isFetchingNextPage && <ul className='w-full h-fit flex flex-col'><DataLayout2Loading image={true} title={true} /></ul> }</div>
+              <div ref={ref}>{ isFetchingNextPage && <div className='w-full h-fit flex flex-col'><DataLayout2Loading image={true} title={true} /></div> }</div>
             )}
         </div>
     )

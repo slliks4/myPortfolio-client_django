@@ -5,7 +5,7 @@ import { useEffect, useRef } from 'react';
 import { motion, useAnimation, useInView } from '../imports/Library';
 
 // Default Function
-export default function SlideAnimationProvider({ children }) {
+export default function SlideAnimationProvider({ children, className="" }) {
     const showCaseRef = useRef(null);
     const isShowCaseInView = useInView(showCaseRef, {once:true});
     const mainControl = useAnimation();
@@ -18,7 +18,7 @@ export default function SlideAnimationProvider({ children }) {
 
     return (
         <motion.div
-            className='w-full h-fit'
+            className={'w-full h-fit '+className}
             ref={showCaseRef}
             variants={
                 {
