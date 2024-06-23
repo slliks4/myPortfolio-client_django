@@ -10,7 +10,7 @@ export default function Experience({ experiences }) {
   return (
     <div className='credentials'>
          <h1>experience</h1>
-         <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus eum vel, iure quis consectetur doloremque, rerum eos maiores sed quam unde velit quae at fugiat quisquam, modi laborum recusandae eius? </p>
+         <p> Over the years, I have amassed a wealth of experience working on diverse projects across various industries. My professional journey has honed my abilities in both front-end and back-end development, enabling me to deliver comprehensive and effective solutions. </p>
         
         <div className='flex flex-col w-full h-fit'>
             { experiences.length === 0 ? (

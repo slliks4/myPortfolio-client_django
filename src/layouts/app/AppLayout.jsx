@@ -4,13 +4,18 @@ import { useEffect } from "react";
 // React router dom imports
 import { Outlet } from "react-router-dom";
 
+// Hooks Import
+import useAppContext from '../../hooks/useAppContext';
+
+// Utils Import
+import ScrollToTop from '../../utils/ScrollToTop';
+
 // Component Imports
 import AppTopHeader from "../../components/app/__header/AppTopHeader";
 import AppFooter from '../../components/app/__footer/AppFooter';
 import AppSideHeader from "../../components/app/__header/AppSideHeader";
 import ScrollTopBtn from "../../components/ScrollTopBtn";
 import SideMenu from '../../components/app/__menu/SideMenu';
-import useAppContext from '../../hooks/useAppContext';
 
 // Default function
 export default function AppLayout() {
@@ -34,6 +39,7 @@ export default function AppLayout() {
       { !showSideMenu && <AppTopHeader /> }
       <AppSideHeader />
       <section className="w-screen min-h-svh max-h-fit pt-20 pb-6 px-3 flex flex-col lg:w-[calc(100vw-20vw)] lg:ml-[calc(100vw-80vw)]">
+        <ScrollToTop />
         <Outlet />
       </section>
       <ScrollTopBtn />

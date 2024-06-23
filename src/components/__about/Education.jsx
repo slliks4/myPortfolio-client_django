@@ -10,7 +10,7 @@ export default function Education({ educations }) {
   return (
     <div className='credentials'>
         <h1>education</h1>
-        <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus eum vel, iure quis consectetur doloremque, rerum eos maiores sed quam unde velit quae at fugiat quisquam, modi laborum recusandae eius? </p>
+        <p>My formal education has provided me with a solid foundation in computer science and software development. The theoretical knowledge and practical skills I acquired during my academic journey have been instrumental in shaping my career as a Full Stack Developer.</p>
         
         <div className='flex flex-col w-full h-fit'>
             { educations.length === 0 ? (

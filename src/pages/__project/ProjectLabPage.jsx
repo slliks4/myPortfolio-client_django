@@ -22,7 +22,7 @@ export default function ProjectLabPage() {
     <>
       <BoxThemeProvider children={
         <> 
-          <h1 className="text-2xl text-white">Code Lab</h1>
+          <h1 className="text-lg text-white">Code Lab</h1>
           <p className="mb-6 mt-3 text-md">
             Welcome to Code Laboratory, a dynamic space where innovation meets technology. Specializing in a diverse range of programming languages and frameworks, we transform ideas into digital realities. 
           </p>

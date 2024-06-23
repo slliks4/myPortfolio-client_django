@@ -10,7 +10,7 @@ export default function Certificates({ files }) {
   return (
     <div className='credentials'>
         <h1>Certificates</h1>
-        <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus eum vel, iure quis consectetur doloremque, rerum eos maiores sed quam unde velit quae at fugiat quisquam, modi laborum recusandae eius? </p>
+        <p> To stay updated with the latest advancements in technology, I have pursued various certifications. These credentials not only reflect my commitment to continuous learning but also my expertise in utilizing modern tools and frameworks to build robust applications. </p>
         
         <div className='flex flex-col w-full h-fit'>
             { files.length === 0 ? (

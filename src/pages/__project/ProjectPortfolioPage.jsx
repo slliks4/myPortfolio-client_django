@@ -22,7 +22,7 @@ export default function ProjectPortfolioPage() {
     <>
       <BoxThemeProvider children={
         <> 
-          <h1 className="text-2xl text-white">Work Portfolio</h1>
+          <h1 className="text-lg text-white">Work Portfolio</h1>
           <p className="mb-6 mt-3 text-md">
             Explore our Work Portfolio, showcasing a collection of projects that highlight our proficiency in cutting-edge technologies. From visually stunning websites designed with HTML5, CSS, and Tailwind, to powerful web applications built with React.js and jQuery, and efficient backend systems developed using Python, Django, and FastAPI, each project reflects our commitment to quality and innovation.
           </p>
