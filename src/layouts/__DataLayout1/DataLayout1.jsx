@@ -27,15 +27,15 @@ export default function DataLayout1({ title, heading, text, image, path, isFetch
         </>
       )}
       <div className='pt-4 w-[calc(100%-10%)]'>
-        { title && (
+        { title ? (
           <small> 
             <p className='text-lg text-primary font-semibold capitalize py-2'>{ title }</p>
           </small>
-        )}
-        { heading && <h3 className='text-md capitalize'>{ heading }</h3> }
-        { text && <p className='text-md'>{ text }</p> } 
+        ) : null}
+        { heading ? <h3 className='text-md capitalize'>{ heading }</h3> : null }
+        { text ? <p className='text-md'>{ text }</p> : null } 
       </div>
-      { path && <LinkBtn path={path} /> }
+      { path ? <LinkBtn path={path} /> : null }
     </>
   )
 }

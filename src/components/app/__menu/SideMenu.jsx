@@ -1,6 +1,9 @@
 // React Router Dom
 import { NavLink } from "react-router-dom";
 
+// Library Imports
+import { motion } from '../../../imports/Library';
+
 // Icons Import
 import{
   AboutNavIcon, HomeNavIcon, BlogsNavIcon, ProjectsNavIcon, ContactNavIcon
@@ -25,7 +28,12 @@ export default function SideMenu() {
   };
 
   return (
-    <div className="fixed overflow-hidden w-screen h-screen z-30  flex">
+    <motion.div 
+      className="fixed overflow-hidden w-screen h-screen z-30 flex"
+      initial={{ opacity: 0, x: '100vw' }}
+      animate={{ opacity:1, x:0 }}
+      transition={{ duration:0.2 }}
+    >
       <div 
         className="w-[calc(100%-90%)] bg-gray-950 opacity-75" 
         onClick={()=> handleClick()}
@@ -37,7 +45,7 @@ export default function SideMenu() {
             key={index}
             onClick={()=>handleClick()}
             className={({ isActive }) => 
-              `my-4 capitalize p-2 text-lg flex items-center ${isActive ? 'border-b-4 border-primary rounded-md' : 'border-b border-secondary'}`
+              `my-4 capitalize p-2 text-lg flex items-center ${isActive ? 'border-b-4 border-primary rounded-bl-md rounded-br-md' : 'border-b border-secondary'}`
             }
           >
             <span className="mr-3">
@@ -47,6 +55,6 @@ export default function SideMenu() {
           </NavLink>
         )) }
       </div>
-    </div>
+    </motion.div>
   )
 }

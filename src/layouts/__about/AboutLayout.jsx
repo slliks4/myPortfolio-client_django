@@ -18,12 +18,14 @@ import '../../pages/__about/scss/About.scss';
 // Default Function
 export default function AboutLayout() {
     const query_key = "profile";
-    const params = {
-        username: 'slliks4'
-    }
+    const params = { username: 'slliks4' };
 
     // Fetch Profile by username
-    const { data:profile, isLoading, error } = useQueryGet({ query_key:query_key, query_func:getProfile, params:params });
+    const { data:profile, isLoading, error } = useQueryGet({ 
+        query_key:query_key, 
+        query_func:getProfile, 
+        params:params 
+    });
     
     return (
         <>

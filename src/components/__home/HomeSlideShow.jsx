@@ -41,12 +41,18 @@ export default function HomeSlideShow({ query_func, query_key, params, title, he
   }, [data, currentIndex, handleLoadNext, hasNextPage]);
 
   return (
-    <div className='w-full'>
+    <>
       { ( status === 'pending' || isFetchingNextPage ) && <DataLayout1Loading /> }
       { ( error || isFetchNextPageError ) && <DataLayout1Error error={error.message} /> }
       { data && !isFetchingNextPage && (
-        <DataLayout1 title={title} heading={heading} image={data.pages[currentIndex].data[0].image} isFetched={true} path={path} imgPath={`${imgPath}/${data.pages[currentIndex].data[0].id}`} />
+        <DataLayout1 
+          title={title} 
+          heading={heading} 
+          image={data.pages[currentIndex].data[0].image} 
+          isFetched={true} path={path} 
+          imgPath={`${imgPath}/${data.pages[currentIndex].data[0].id}`} 
+        />
       )}
-    </div>
+    </>
   )
 }

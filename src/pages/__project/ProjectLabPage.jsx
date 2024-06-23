@@ -20,16 +20,19 @@ export default function ProjectLabPage() {
 
   return (
     <>
-      <BoxThemeProvider children={
-        <> 
-          <h1 className="text-lg text-white">Code Lab</h1>
-          <p className="mb-6 mt-3 text-md">
-            Welcome to Code Laboratory, a dynamic space where innovation meets technology. Specializing in a diverse range of programming languages and frameworks, we transform ideas into digital realities. 
-          </p>
-          <BuildCategories categories={categories} setParams={setParams} params={params} />
-          <Project query_key={query_key} params={params} />
-        </>
-      }/>
+      <BoxThemeProvider
+        className={'mt-4'}
+        children={
+          <> 
+            <h1 className="text-lg text-white">Code Lab</h1>
+            <p className="mb-6 mt-3 text-md">
+              Welcome to Code Laboratory, a dynamic space where innovation meets technology. Specializing in a diverse range of programming languages and frameworks, we transform ideas into digital realities. 
+            </p>
+            <BuildCategories categories={categories} setParams={setParams} params={params} />
+            <Project query_key={query_key} params={params} />
+          </>
+        }
+      />
       <Contact />
     </>
   )

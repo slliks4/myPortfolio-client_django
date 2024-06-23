@@ -12,7 +12,7 @@ export default function NavHeader({ params }) {
           <NavLink to={param.path} key={index} className={({ isActive }) => getActiveClass(isActive)}>{param.name} / </NavLink>
         )) }
       </div>
-    } className={'my-4'} />
+    } />
   )
 }
 

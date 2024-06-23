@@ -38,7 +38,7 @@ export default function AppLayout() {
       { showSideMenu && <SideMenu /> }
       { !showSideMenu && <AppTopHeader /> }
       <AppSideHeader />
-      <section className="w-screen min-h-svh max-h-fit pt-20 pb-6 px-3 flex flex-col lg:w-[calc(100vw-20vw)] lg:ml-[calc(100vw-80vw)]">
+      <section className="w-screen min-h-svh max-h-fit pt-24 pb-6 px-3 flex flex-col lg:w-[calc(100vw-20vw)] lg:ml-[calc(100vw-80vw)]">
         <ScrollToTop />
         <Outlet />
       </section>

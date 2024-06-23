@@ -18,7 +18,7 @@ export default function AboutDefaultPage() {
   const { profile } = useOutletContext();
 
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col mt-4'>
       <BoxThemeProvider children={
         <div className="w-full h-fit">
           <div className="flex flex-col">
