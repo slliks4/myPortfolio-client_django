@@ -1,3 +1,5 @@
+// React Router Dom Import
+import { Link } from 'react-router-dom';
 // Icons Import
 import { MapIcon } from '../../imports/Icons';
 
@@ -15,7 +17,7 @@ export default function Address({ address }) {
         <small>
             <p>location</p>
         </small>
-        <p>{ address }</p>
+        <Link>{ address }</Link>
       </div>
     </SlideAnimationProvider>
   )
