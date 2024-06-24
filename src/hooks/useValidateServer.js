@@ -7,7 +7,7 @@ import apiGet from "../services/apiGet";
 // Default Funtion
 const useValidateServer = () => {
     const { isLoading, error } = useQuery({
-        queryFn: () => apiGet({ endpoint:"/api" }),
+        queryFn: () => apiGet({ endpoint:"/api/" }),
         queryKey: ['validateServer'],
         refetchInterval: 300000
     });

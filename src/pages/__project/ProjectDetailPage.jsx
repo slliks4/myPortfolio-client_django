@@ -17,8 +17,6 @@ export default function ProjectDetailPage() {
     params: params
   });
 
-  console.log(error);
-
   return (
     <>
       { isLoading && <AppLoading /> }

@@ -22,7 +22,7 @@ export default function DataLayout2({ title, heading, date, text, path ,image, s
                 )}
             </>
         )}
-        <div className='py-4 px-3'>
+        <div className='p-3'>
             { heading && <h3 className='text-primary text-md capitalize'>{ path ? <Link to={path}>{ heading }</Link>: <>{ heading }</>}</h3> }
             { title && <h2 className='capitalize text-lg text-white'>{ title }</h2> }
             { date && <h4 className='text-primary text-sm uppercase py-2'>{ date }</h4> }

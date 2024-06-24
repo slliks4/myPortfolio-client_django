@@ -5,7 +5,7 @@ import apiGet from "../../services/apiGet";
 const getProfile = async ({ username }) => {
     const endpoint = "/api/getProfile/";
     const params = [
-        username ? `${username}` : ''
+        username ? `${username}/` : ''
     ].filter(Boolean).join('&'); 
     
     return apiGet({ endpoint, params });
