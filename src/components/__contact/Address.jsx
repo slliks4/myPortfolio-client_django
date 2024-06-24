@@ -13,7 +13,7 @@ export default function Address({ address }) {
       <div>
         <MapIcon />
       </div>
-      <div>
+      <div className=' w-[calc(100%-25%)]'>
         <small>
             <p>location</p>
         </small>

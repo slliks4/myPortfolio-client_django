@@ -14,7 +14,7 @@ export default function Tel({ tel }) {
         <div>
             <PhoneIcon />
         </div>
-        <div>
+        <div className='w-[calc(100%-25%)]'>
             <small>
                 <p> tel </p>
             </small>

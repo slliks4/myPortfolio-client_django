@@ -14,7 +14,7 @@ export default function Email({ email }) {
         <div>
             <EnvelopeIcon />
         </div>
-        <div>
+        <div className=' w-[calc(100%-25%)]'>
             <small>
                 <p> mail us</p>
             </small>
