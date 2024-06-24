@@ -6,6 +6,7 @@ export default async function apiPost({ endpoint="", data={} }) {
     const url = baseUrl+endpoint;
 
     const response = await fetch(url,{
+        method: 'POST',
         headers:{
             'Content-Type': 'application/json'
         }, 

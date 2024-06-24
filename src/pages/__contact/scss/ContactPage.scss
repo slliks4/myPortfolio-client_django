@@ -1,0 +1,38 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.contact-page{
+    h3{
+        @apply text-lg pb-4 capitalize text-white;
+    }
+
+    .contact-info{
+        >div{
+            @apply w-full flex break-words items-center mb-4;
+
+            >div:nth-child(1){
+                @apply text-2xl p-4 mr-4 rounded-md bg-secondary text-white shadow-md;
+            }
+
+            >div:nth-child(2){
+                @apply w-[calc(100%-25%)];
+
+                small{
+                    @apply uppercase text-primary font-bold;
+                }
+
+                a{
+                    @apply block leading-7;
+                }
+            }
+        }
+    }
+
+    .feed-back{
+        >input, textarea{
+            @apply w-full py-2 my-2 bg-transparent border-b border-secondary focus:border-primary focus:border-b-2 outline-none no-scrollbar;
+        }
+    }
+}

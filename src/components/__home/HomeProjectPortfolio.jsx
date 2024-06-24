@@ -17,7 +17,7 @@ export default function HomeProjectPortfolio() {
             title={'project portfolio'}
             heading={'explore more'}
             path={'/project/portfolio'}
-            imgPath={'/project/portfolio'}
+            imgPath={'/project'}
             query_key={'projectPortfolio'}
             query_func={getProjects}
             params={{ limit: 1, isLab:'false' }}

@@ -17,6 +17,12 @@ body.side-menu{
     overflow: hidden;
 }
 
+.custom-toast .Toastify__toast{
+    background: var(--gradient-dark);
+    text-transform: capitalize;
+    color: #fff; 
+}
+
 .bg-blur{
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur( 20px );

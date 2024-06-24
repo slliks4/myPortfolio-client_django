@@ -27,7 +27,8 @@ import ProjectPortfolioPage from './pages/__project/ProjectPortfolioPage';
 import ProjectLabPage from './pages/__project/ProjectLabPage';
 import AboutDefaultPage from './pages/__about/AboutDefaultPage';
 import CredentialPage from './pages/__about/CredentialPage';
-
+import ContactPage from './pages/__contact/ContactPage';
+import ProjectDetailPage from "./pages/__project/ProjectDetailPage";
 
 // Default Function
 function App() {
@@ -59,9 +60,11 @@ function App() {
             { path:'portfolio', element: <ProjectPortfolioPage /> },
             { path:'lab', element: <ProjectLabPage /> }
           ]
-        }
+        },
+        { path: 'contact', element: <ContactPage /> }
       ]
     },
+    { path: "/project/:id", element: <ProjectDetailPage /> },
     { path:"*", element: <NotFoundPage /> }
   ]);
 
@@ -71,7 +74,19 @@ function App() {
   return (
     <AppContextProvider>    
       <RouterProvider router={routes} />
-      <ToastContainer />
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+        className={"custom-toast"}
+      />
     </AppContextProvider>
   );
 }

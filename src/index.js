@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 
 // Style
 import './assets/scss/index.scss';
+import 'react-toastify/dist/ReactToastify.css';
 
 // Component Import
 import App from './App';
