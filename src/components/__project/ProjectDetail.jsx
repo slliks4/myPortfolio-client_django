@@ -22,9 +22,9 @@ export default function ProjectDetail({ project }) {
     <motion.div
       initial={{ opacity: 0, x: '100vw' }}
       animate={{ opacity:1, x:0 }}
-      className='fixed w-screen h-screen z-30 flex flex-col overflow-x-hidden overflow-y-scroll p-4 bg-gradient-dark'
+      className='fixed w-screen h-screen z-30 flex flex-col overflow-x-hidden overflow-y-scroll no-scrollbar p-4 bg-gradient-dark'
     >
-      <div className='w-full h-[calc(100vh-50vh)] overflow-y-scroll no-scrollbar rounded-md shadow-md mb-4'>
+      <div className='w-full min-h-[calc(100vh-50vh)] overflow-y-scroll no-scrollbar rounded-md shadow-md mb-4'>
         { project.image ? (
           <img src={`${baseUrl}${project.image}`} alt={project.title} className='' />
         ):(
