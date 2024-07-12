@@ -18,9 +18,9 @@ export default function HomeProjectPortfolio() {
             heading={'explore more'}
             path={'/project/portfolio'}
             imgPath={'/project'}
-            query_key={'projectPortfolio'}
+            query_key={'homeProjectPortfolio'}
             query_func={getProjects}
-            params={{ limit: 1, isLab:'false' }}
+            params={{ limit: 6, isLab:'false' }}
           /> 
         </div>
       }

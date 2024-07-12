@@ -19,9 +19,9 @@ export default function HomeProjectLab() {
             heading={'explore more'}
             path={'/project/lab'}
             imgPath={'/project'}
-            query_key={'projectLab'}
+            query_key={'homeProjectLab'}
             query_func={getProjects}
-            params={{ limit: 1, isLab: 'true' }}
+            params={{ limit: 6, isLab: 'true' }}
           />
         </div>
       }

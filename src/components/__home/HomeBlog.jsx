@@ -18,9 +18,9 @@ export default function HomeBlog() {
           heading={'explore more'}
           path={'/blogs'}
           imgPath={'/blogs'}
-          query_key={'blogs'}
+          query_key={'homeBlogs'}
           query_func={getBlogs} 
-          params={{ limit: 1 }} 
+          params={{ limit: 6 }} 
         /> 
       }
     />
