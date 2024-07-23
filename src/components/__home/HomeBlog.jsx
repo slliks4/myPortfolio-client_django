@@ -16,8 +16,8 @@ export default function HomeBlog() {
         <HomeSlideShow
           title={'blogs'}
           heading={'explore more'}
-          path={'/blogs'}
-          imgPath={'/blogs'}
+          path={'/blog'}
+          imgPath={'/blog'}
           query_key={'homeBlogs'}
           query_func={getBlogs} 
           params={{ limit: 6 }} 
