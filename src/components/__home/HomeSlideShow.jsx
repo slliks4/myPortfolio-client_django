@@ -50,7 +50,7 @@ export default function HomeSlideShow({ query_func, query_key, params, title, he
     <>
       { ( isLoading ) && <DataLayout1Loading /> }
       { ( error ) && <DataLayout1Error error={error.message} /> }
-      { slides && (
+      {slides && slides.data && slides.data.length > 0 && (
         <DataLayout1 
           title={title} 
           heading={heading} 
